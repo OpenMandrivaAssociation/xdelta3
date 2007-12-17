@@ -16,7 +16,6 @@ URL:			http://xdelta.org
 License:		GPL
 Group:			File tools
 BuildRequires:		zlib-devel
-BuildRoot:		%{_tmppath}/%{name}-%{version}-root
 
 %description
 Xdelta3 is the third and latest release of Xdelta, which is a set of
