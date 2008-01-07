@@ -1,5 +1,5 @@
-%define version		3.0q
-%define fversion	30q
+%define version		3.0t
+%define fversion	30t
 %define release		1
 %define name		xdelta3
 
@@ -10,8 +10,8 @@ Summary:		A binary delta generator
 Name:			%{name}
 Version:		%{version}
 Release:		%mkrel %{release}
-Source0:		http://xdelta.googlecode.com/files/xdelta30q.tar.bz2
-Patch0:			xdelta30q-optflags.patch
+Source0:		http://xdelta.googlecode.com/files/xdelta%{version}.tar.bz2
+Patch0:			xdelta%{version}-optflags.patch
 URL:			http://xdelta.org
 License:		GPL
 Group:			File tools
@@ -39,14 +39,13 @@ required to develop applications using Xdelta3.
 %endif
 
 %prep
-%setup -q -n xdelta%{fversion}
+%setup -q -n xdelta%{version}
 %patch0 -p1 -b .optflags
 
 %build
 make RPM_OPT_FLAGS="-O2" all \
 	xdelta3 \
 	xdelta3-decoder \
-	xdelta3-tune \
 	xdelta3-tools \
 	xdelta3-everything \
 	xdelta3-all.o
@@ -63,7 +62,6 @@ mkdir -p %{buildroot}%{_libdir}	%{buildroot}%{_includedir}
 
 install -m 755 xdelta3 \
 	xdelta3-decoder \
-	xdelta3-tune \
 	xdelta3-tools \
 	xdelta3-everything %{buildroot}%{_bindir}
 %if %build_staticlib
