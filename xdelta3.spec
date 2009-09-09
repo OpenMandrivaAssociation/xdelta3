@@ -1,6 +1,6 @@
 %define version		3.0t
 %define fversion	30t
-%define release		1
+%define release		2
 %define name		xdelta3
 
 %define build_staticlib 0
