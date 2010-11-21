@@ -1,6 +1,7 @@
-%define version		3.0t
-%define fversion	30t
-%define release		2
+%define version		3.0v2
+%define fversion	30v2
+%define frealversion	3.0v
+%define release		1
 %define name		xdelta3
 
 %define build_staticlib 0
@@ -39,11 +40,11 @@ required to develop applications using Xdelta3.
 %endif
 
 %prep
-%setup -q -n xdelta%{version}
+%setup -q -n xdelta%{frealversion}
 %patch0 -p1 -b .optflags
 
 %build
-make RPM_OPT_FLAGS="-O2" all \
+RPM_OPT_FLAGS="%{optflags}" make RPM_OPT_FLAGS="%{optflags}" all \
 	xdelta3 \
 	xdelta3-decoder \
 	xdelta3-tools \
@@ -83,3 +84,4 @@ rm -rf %{buildroot}
 %{_includedir}/*.h
 %{_libdir}/*.a
 %endif
+
