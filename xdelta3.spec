@@ -85,3 +85,34 @@ rm -rf %{buildroot}
 %{_libdir}/*.a
 %endif
 
+
+
+%changelog
+* Sun Nov 21 2010 Giuseppe Ghibò <ghibo@mandriva.com> 3.0v2-1mdv2011.0
++ Revision: 599401
+- Upgrade to release 3.0v2.
+
+* Wed Sep 09 2009 Thierry Vignaud <tv@mandriva.org> 3.0t-2mdv2010.0
++ Revision: 435073
+- rebuild
+
+* Mon Jan 07 2008 Giuseppe Ghibò <ghibo@mandriva.com> 3.0t-1mdv2008.1
++ Revision: 146203
+- Release 3.0t.
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Thu May 31 2007 Giuseppe Ghibò <ghibo@mandriva.com> 3.0q-1mdv2008.0
++ Revision: 33122
+- Import xdelta3
+
+
+
+* Thu May 31 2007 Giuseppe Ghib� <ghibo@mandriva.com> 3.0q-1mdv2008.0
+- Use -O2 instead of %%{optflags} as there are problems compiling with
+  fortify enabled.
+- initial release.
