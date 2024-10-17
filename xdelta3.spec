@@ -13,7 +13,7 @@ Version:		%{version}
 Release:		%mkrel %{release}
 Source0:		http://xdelta.googlecode.com/files/xdelta%{version}.tar.bz2
 Patch0:			xdelta%{version}-optflags.patch
-URL:			http://xdelta.org
+URL:			https://xdelta.org
 License:		GPL
 Group:			File tools
 BuildRequires:		zlib-devel
