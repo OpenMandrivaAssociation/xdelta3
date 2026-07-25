@@ -1,7 +1,7 @@
 %define version		3.0v2
 %define fversion	30v2
 %define frealversion	3.0v
-%define release		2
+%define release 3
 %define name		xdelta3
 
 %define build_staticlib 0
@@ -10,7 +10,7 @@
 Summary:		A binary delta generator
 Name:			%{name}
 Version:		%{version}
-Release:		%mkrel %{release}
+Release:		%{release}.1
 Source0:		http://xdelta.googlecode.com/files/xdelta%{version}.tar.bz2
 Patch0:			xdelta%{version}-optflags.patch
 URL:			https://xdelta.org
@@ -112,7 +112,7 @@ rm -rf %{buildroot}
 
 
 
-* Thu May 31 2007 Giuseppe Ghibò <ghibo@mandriva.com> 3.0q-1mdv2008.0
+* Thu May 31 2007 Giuseppe Ghibï¿½ <ghibo@mandriva.com> 3.0q-1mdv2008.0
 - Use -O2 instead of %%{optflags} as there are problems compiling with
   fortify enabled.
 - initial release.
